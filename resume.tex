@@ -1,0 +1,216 @@
+\documentclass[a4,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+ \usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{tabularx}
+\hypersetup{colorlinks=true,urlcolor=blue}
+\usepackage[11pt]{moresize}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage[inline]{enumitem}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{anyfontsize}
+
+\usepackage[margin=1cm, top=1cm]{geometry}
+
+\setmainfont[
+BoldFont=SourceSansPro-Semibold.otf,
+ItalicFont=SourceSansPro-RegularIt.otf
+]{SourceSansPro-Regular.otf}
+\setsansfont{SourceSansPro-Semibold.otf}
+
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\definecolor{UI_blue}{RGB}{32, 64, 151}
+
+\usepackage[style=nature, maxbibnames=6, sorting=none]{biblatex}
+\addbibresource{Publications.bib}
+\renewcommand*{\revsdnamepunct}{}
+\DeclareCiteCommand{\cvcite}{}{\printtext[bibhyperref]{\printfield{labelnumber}}}{\addcomma\space}{}
+
+\renewcommand*{\mkbibnamegiven}[1]{%
+\ifitemannotation{highlight}
+{\textbf{#1}}
+{#1}}
+
+\renewcommand*{\mkbibnamefamily}[1]{%
+\ifitemannotation{highlight}
+{\textbf{#1}}
+{#1}}
+
+\titleformat{\section}{
+\color{UI_blue} \scshape \raggedright \large 
+}{}{0em}{}[\vspace{-10pt} \hrulefill \vspace{-6pt}]
+
+\newcommand{\subtext}[1]{
+#1\par\vspace{-0.2cm}}
+
+\setlist[itemize]{align=parleft,left=0pt..1em}
+
+\newenvironment{zitemize}{
+\begin{itemize}\itemsep0pt \parskip0pt \parsep1pt}
+{\end{itemize}\vspace{-0.5cm}}
+
+\newcommand{\hskills}[1]{
+\textbf{\bfseries #1} }
+
+\titleformat{\subsection}{\vspace{-0.1cm} 
+\bfseries \fontsize{11pt}{2cm}}{}{0em}{}[\vspace{-0.2cm}]
+
+\begin{document}
+\nocite{*}
+
+\begin{center}
+    \begin{minipage}[b]{0.24\textwidth}
+            {\href{mailto:wanrongz@usc.edu}{wanrongz@usc.edu} } \\
+            \href{https://zoeyzheng0.github.io/}{zoeyzheng0.github.io}
+    \end{minipage}%
+    \begin{minipage}[b]{0.52\textwidth}
+            \centering
+            {\LARGE Wanrong (Zoey) Zheng} \\
+            \makebox[\linewidth][c]{\small Available for a 2027 research internship $\cdot$ Flexible start (Spring, Summer, or Fall)}
+    \end{minipage}%
+    \begin{minipage}[b]{0.24\textwidth}
+            \flushright \large
+            \normalsize \href{https://scholar.google.com/citations?user=2BkMihkAAAAJ&hl=en}{Google Scholar} \\
+            \normalsize \href{https://www.linkedin.com/in/zoeyzheng0/}{linkedin.com/in/zoeyzheng0}
+    \end{minipage}
+
+\end{center}
+
+\section{Education}
+\subsection*{University of Southern California{\normalsize \normalfont, Ph.D. student in Computer Science, Advisor: Prof. \href{http://ilab.usc.edu/itti/}{Laurent Itti}  \hfill \textit{May 2024 --- May 2028}}}
+\vspace{0.15cm}
+\subsection*{University of Southern California{\normalsize \normalfont, M.S. in Computer Science, Advisor: Prof. \href{https://sites.usc.edu/iris-cvlab/professor-ram-nevatia/} {Ram Nevatia}\hfill \textit{Aug. 2021 --- May 2023}}}
+\vspace{0.5cm}
+
+\section{Research Interests}
+\textbf{LLM Spatial Intelligence} [\cvcite{Pap7,Pap6}]: Developing language-guided agents that understand and navigate complex visual environments.
+
+\textbf{Multimodal Perception} [\cvcite{Pap5,Pap4,Pap3,Pap2,Pap1}]:  Exploring the synergistic effects of diverse data for enhanced machine understanding.
+
+\textbf{Human-AI Knowledge Exchange} [\cvcite{Pap8}]: Enabling humans to understand and guide neural networks through structured visual concepts.
+
+\section{Publications} 
+\renewcommand\refname{\vskip -1.5em}
+\printbibliography[heading=none]
+
+\section{Employment}
+
+\subsection*{University of Southern California  \hfill Los Angeles, CA} 
+\subtext{\textit{Research Assistant, Advisor: Prof. \href{http://ilab.usc.edu/itti/} {Laurent Itti}   \hfill May 2024 --- Present}}
+\vspace{0.2cm}
+\subtext{\textit{Research Assistant, Advisor: Prof. \href{https://sites.usc.edu/iris-cvlab/professor-ram-nevatia/} {Ram Nevatia}   \hfill Jan. 2022 --- May 2024}}
+    
+\subsection*{SenseTime Technology Co., Ltd.  \hfill Shenzhen, China} 
+\subtext{\textit{Research Engineer, Advisor:  Dr. \href{https://scholar.google.com/citations?user=Dqjnn0gAAAAJ&hl=en} {Ding Liang} \& Dr. \href{https://shockjiang.github.io/} {Xiaoke Jiang}    \hfill Sep. 2019 --- Aug. 2021}}
+
+\subsection*{Chinese Academy of Sciences, Shenzhen Institutes of Advanced Technology \hfill Shenzhen, China} 
+\subtext{\textit{Research Assistant, Advisor: Dr. \href{https://dblp.org/pid/65/3144-1.html} {Qiong Wang}
+    \hfill Jul. 2018 --- Jun. 2019}}
+
+\subsection*{The Chinese University of Hong Kong, Shenzhen Research Institute \hfill Shenzhen, China} 
+\subtext{\textit{Research Intern \hfill Dec. 2017 --- Jun. 2018} }
+
+\vspace{0.15cm}
+\section{Awards \& Honors}
+\noindent 1st on \href {https://arxiv.org/abs/1607.08221} {MS1M} dataset in \href {https://arxiv.org/abs/2108.08191} {Masked Face Recognition Challenge} (ICCV 2021) out of 136 teams \hfill{\textit{Oct. 2021}}
+
+\noindent 2nd on \href {https://paperswithcode.com/dataset/glint360k} {Glint360k} dataset in \href {https://arxiv.org/abs/2108.08191} {Masked Face Recognition Challenge} (ICCV 2021) out of 86 teams \hfill{\textit{Oct. 2021}}
+
+\section{Service}
+\textbf{Conference Reviewer}: CVPR 2026, ECCV 2026, NeurIPS 2026, AISTATS 2026-2027
+
+\textbf{Journal Reviewer}: IEEE Transactions on Pattern Analysis and Machine Intelligence, IEEE Transactions on Multimedia, IEEE Transactions on Cognitive and Developmental Systems, International Journal of Computer Vision
+
+\section{Research Experience}
+
+\subsection*{iLab, University of Southern California \hfill Los Angeles, CA}
+\subtext{\textit{Research Assistant, Advisor: Prof. \href{http://ilab.usc.edu/itti/} {Laurent Itti} }\hfill \textit{May 2024 --- Present}}
+    \begin{zitemize}
+        \item \textbf{Three-Step Nav: A Hierarchical Global–Local Planner for Zero-Shot Vision-and-Language Navigation}
+            \begin{itemize}
+                \item Proposed a hierarchical global-local framework that alternates between \textit{looking forward} to sketch global plans, \textit{looking now} for fine-grained local grounding, and \textit{looking backward} to audit execution history.
+                \item Designed an adaptive judge module equipped with meta-skills to detect navigation drift and trigger self-correction without task-specific fine-tuning.
+                \item Achieved state-of-the-art zero-shot performance on R2R-CE and RxR-CE datasets, reducing navigation error by 15\% and improving SPL by 12\% on R2R-CE validation splits.
+                \item One first-author paper accepted at AISTATS 2026 \cite{Pap6}.
+            \end{itemize}
+            
+        \end{zitemize}
+
+\subsection*{IRIS Computer Vision Lab, University of Southern California \hfill Los Angeles, CA}
+\subtext{\textit{Research Assistant, Advisor: Prof. \href{https://sites.usc.edu/iris-cvlab/professor-ram-nevatia/} {Ram Nevatia} }\hfill \textit{Jan. 2022 --- May 2024}}
+    \begin{zitemize}
+    
+        \item \textbf{ShARc: Shape and Appearance Recognition for Person Identification In-the-wild}
+            \begin{itemize}
+                \item Developed a multimodal framework that integrates the pose and shape encoder with the aggregate appearance encoder for robust person identification in uncontrolled environments.
+                \item Achieved state-of-the-art results on public cloth-changing person re-identification datasets such as CCVID, MEVID, and BRIAR.
+                \item Published one co-author paper at WACV 2024 \cite{Pap4}.
+            \end{itemize}
+            
+        \item \textbf{GaitRef: Gait Recognition with Refined Sequential Skeletons}
+            \begin{itemize}
+                \item Combined the silhouettes and skeletons information and refined the framewise joint predictions for gait recognition.
+                \item On Gait3D, the proposed method outperformed the baseline by 6.1\% on Rank-1 and 5.4\% on Rank-5.
+                \item Published one primary-author paper at IJCB 2023 (oral) \cite{Pap3}.
+            \end{itemize}
+
+        \end{zitemize}
+        
+\subsection*{Identity Verification, SenseTime \hfill Shenzhen, China} 
+\subtext{\textit{Research Engineer, Advisor: Dr. \href{https://scholar.google.com/citations?user=Dqjnn0gAAAAJ&hl=zh-CN}{Ding Liang}} \& Dr. \href{https://scholar.google.com/citations?user=20Its9kAAAAJ&hl=en} {Yichao Wu} \hfill \textit{Jan. 2021 --- Aug. 2021}}
+    \begin{zitemize}
+        \item \textbf{Large-scale Phone Unlock Facial Verification}
+            \begin{itemize} 
+
+                \item Updated face unlock models for Chinese mobile phone manufacturers such as Huawei, Oppo, and Vivo.
+                \item Prepared three different size levels of models for various products' performance needs and used different training strategies.
+                \item Achieved 1e-6FAR@recall 90\% for different races, including Caucasian, African, Asian, Indian,  and Latino.
+                
+            \end{itemize}
+    \end{zitemize}
+
+\subsection*{Smart City Group, SenseTime \hfill Shenzhen, China} 
+\subtext{\textit{Research Engineer, Advisor: Dr. \href{https://shockjiang.github.io/} {Xiaoke Jiang}  \& Dr. \href{https://scholar.google.com/citations?user=rEYarG0AAAAJ&hl=en}{Junjie Yan} \hfill Dec. 2019 --- Dec. 2020}}
+    \begin{zitemize}
+        \item \textbf{Self-Separated Network to Align Parts for 3D Convolution in Video Person Re-Identification}
+            \begin{itemize} 
+                \item Trained the Self-Separated Network in supervised / semi-supervised / unsupervised ways, which proved the efficiency of the semi-supervised alignment strategies, which used the labels with the selected position. 
+                \item Received a 15.5\% Rank-1 improvement on iLIDS compared to the fully supervised way. 
+                \item Published one co-author paper at AAAI 2021 \cite{Pap1}.
+            \end{itemize}
+            
+    \end{zitemize}
+
+\section{Patents}
+\begin{enumerate}[leftmargin=*]
+
+  \item \textbf{Wanrong Zheng} and Xiaoke Jiang. \textbf{An Identification Method Based on History Passenger Flow Big Data.} \textit{CN113269129A} (2021)
+
+  \item Zhe Sun, \textbf{Wanrong Zheng}, Xiaoke Jiang, Xinghua Yao, and Cong Ji. \textbf{Passenger Illegal Handing Bags Across Railing Detection in Real Railway Scene.} \textit{CN112818844A} (2021)
+
+  \item \textbf{Wanrong Zheng}, Xiaoke Jiang, Jikui Bao, Qichen Li, and Cong Ji. \textbf{A Railway Face Recognition Solution Based on History Passengers' Riding Pattern.} \textit{CN112232424A} (2020)
+\end{enumerate}
+
+\end{document}
